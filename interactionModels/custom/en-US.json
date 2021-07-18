@@ -1,0 +1,364 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "get hackathon project",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureZodiacSignIntent",
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "multipleValues": {
+                "enabled": true
+              }
+            }
+          ],
+          "samples": [
+            "whats my zodiac sign",
+            "what\u0027s my zodiac sign",
+            "{day} {month} {year}",
+            "{year} {month} {day}",
+            "{year} {month}",
+            "{month} {year}",
+            "{month} {day}",
+            "{day} {month}",
+            "{year}",
+            "{day}",
+            "{month}",
+            "my birthday is on {month} {day} {year}",
+            "my birthday is on {day} {month} {year}",
+            "my birth day is on {day} {month} {year}",
+            "i was born on {day}",
+            "i was born in {year}",
+            "i was born in {month}",
+            "in {month} of {year} i was born",
+            "i was born on {day} {month}",
+            "i was born on {year} {month} {day}",
+            "i was born on {day} {month} {year} ",
+            "whats the zodiac sign",
+            "could you please tell me what my zodiac sign is",
+            "please tell me what my zodiac sign is based on my birthday",
+            "let me know my zodiac sign",
+            "tell me my zodiac sign for my birthday",
+            "tell me my birthday zodiac sign",
+            "for my birthday please tell me my zodiac sign",
+            "tell zodiac sign for my birthday",
+            "please state my zodiac sign once more",
+            "please repeat my zodiac sign",
+            "tell my zodiac sign once more",
+            "say my zodiac sign",
+            "what is your take on my zodiac sign",
+            "can you tell me what my zodiac sign is",
+            "what about my zodiac sign",
+            "can you tell my zodiac sign",
+            "can you give my zodiac sign",
+            "what is my zodiac sign",
+            "want to know my zodiac sign",
+            "zodiac sign",
+            "do you know what my zodiac sign is",
+            "find out what my zodiac sign is",
+            "get my zodiac sign",
+            "open my zodiac sign",
+            "i was born on {day} {month} {year} what is my zodiac sign",
+            "I was born on {month} {year}",
+            "I was born on {month} {day}",
+            "I was born on {month} {day} {year}",
+            "I was born on November seventh nineteen eighty-three"
+          ]
+        },
+        {
+          "name": "CaptureRestaurantIntent",
+          "slots": [
+            {
+              "name": "cuisine",
+              "type": "cuisine",
+              "samples": [
+                "{cuisine}"
+              ],
+              "multipleValues": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "location",
+              "type": "location",
+              "samples": [
+                "{location}"
+              ],
+              "multipleValues": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "costtype",
+              "type": "costtype",
+              "samples": [
+                "{costtype}"
+              ],
+              "multipleValues": {
+                "enabled": false
+              }
+            }
+          ],
+          "samples": [
+            "find a {cuisine} reaturant near {location}",
+            "find a {costtype} restaurant near {location}",
+            "{cuisine}",
+            "{costtype}",
+            "{location}",
+            "find a {costtype} restaurant near me",
+            "find a restaurant near {location}",
+            "top {cuisine} restaurants"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "high"
+              }
+            },
+            {
+              "name": {
+                "value": "low"
+              }
+            },
+            {
+              "name": {
+                "value": "medium"
+              }
+            }
+          ],
+          "name": "costtype"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "north indian"
+              }
+            },
+            {
+              "name": {
+                "value": "south asian"
+              }
+            },
+            {
+              "name": {
+                "value": "punjabi"
+              }
+            },
+            {
+              "name": {
+                "value": "bengali"
+              }
+            },
+            {
+              "name": {
+                "value": "pakistani"
+              }
+            },
+            {
+              "name": {
+                "value": "chinese"
+              }
+            },
+            {
+              "name": {
+                "value": "indian"
+              }
+            },
+            {
+              "name": {
+                "value": "desi"
+              }
+            }
+          ],
+          "name": "cuisine"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "bangalore"
+              }
+            },
+            {
+              "name": {
+                "value": "hyderabad"
+              }
+            }
+          ],
+          "name": "location"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1584159273328.550704250978"
+              }
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1584159273328.477226689502"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1584159273328.284612839723"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CaptureRestaurantIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "cuisine",
+              "type": "cuisine",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1562175163489.34830477420"
+              }
+            },
+            {
+              "name": "location",
+              "type": "location",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1562175163489.1369164015085"
+              }
+            },
+            {
+              "name": "costtype",
+              "type": "costtype",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1562175163489.284561744541"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1584159273328.550704250978",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what month were you born"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1584159273328.477226689502",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what day were you born "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1584159273328.284612839723",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what year were you born"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1562175163489.34830477420",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what cuisine are you interested in ?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1562175163489.1369164015085",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what location are you interested in ?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1562175163489.284561744541",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what cost type are you interested in ?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "6"
+}
